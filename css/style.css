@@ -1,0 +1,102 @@
+body {
+    background: green;
+    font-family: "Raleway";
+    color: white;
+    height: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin: 8px;
+    display: block;
+}
+div {
+    display: block;
+}
+input {
+    padding: 10px 0px;
+    font-size: 20px;
+    text-align: center;
+    margin: 30px;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end:  0px;
+    padding-inline-start: 40px;
+}
+p {
+    font-size: 1.6em;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end:  0px;
+} 
+#myWord {
+    margin: 0;
+    padding: 30px;
+    display: block;
+} 
+#myWord li {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1.6em;
+}
+#myLives {
+    font-size: 1.6em;
+    text-align: center;
+    display: block;
+}  
+button {
+    border-radius: 5px;
+    background:white;
+    color: green;
+    border:solid 1px white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2em;
+    padding: 18px 10px;
+    width:180px;
+    margin: 10px;
+    outline: none;
+}
+button:hover {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #c1d72e;
+    border: solid 1px #fff;
+    color: #fff;
+}
+canvas {
+    color: white;
+    border: white solid 2px;
+    padding: 10px;
+}
+
+
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+  
+h1 {
+    font-size: 2.6em;
+    padding: 20px;
+}
+  
+h2 {
+    font-size: 1.2em;
+    padding-top: 20px;
+}
+  
+p {
+    font-size: 1.6em;
+} 

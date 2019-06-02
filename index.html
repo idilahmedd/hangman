@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Hangman!</h1> 
+    <canvas id="stickman"></canvas>
+    <main>
+        <input type="text" name= "input">
+        <button>Submit</button>
+    <h2> Enter an alphabet letter above to guess the word, or click play again to start over.</h2>
+        <div id= "enter">
+            <ul id="myWord">
+                <li class="guess">_</li>
+                <li class="guess">_</li>
+                <li class="guess">_</li>
+                <li class="guess">_</li>
+            </ul>
+        </div>
+        <p id= "myLives">You have 10 trys</p>
+        <div class="container">
+            <button id="reset">Play again</button>
+        </div>
+    </main>  
+    <footer>
+        <script src= "js/script.js"></script>
+    </footer>    
+</body>
+</html>
