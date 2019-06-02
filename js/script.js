@@ -34,10 +34,10 @@ var words = [
     "cookies",
     "passion",
     "caramel",
-    "coffee"
     ];
 var word = words[Math.floor(Math.random() * words.length)]
 var trys = "myLives"; 
+var guessingLetter = "";
 
 var answerArray = [];
 for (var i = 0; i < word.length; i++) {
@@ -46,20 +46,17 @@ for (var i = 0; i < word.length; i++) {
 var remainingLetters = word.length;
 
 
-
-
 var inputString = "";
 var inputEl = document.querySelector("input");
 var pEl = document.getElementById("myLives");
-
+var btnEl1 = document.getElementById("submit")
 
 btnEl1.addEventListener("click", function(e) {
-  var letterInput = inputElLtr.value;
-  inputElLtr.value = "input"; 
+  var letterInput = inputEl.value;
+  inputEl.value = ""; 
   guessingLetter = guessingLetter + letterInput;
-  pEl1.answerArray = guessingLetter;
+  pEl.answerArray = guessingLetter;
 });
-
 
 
 
