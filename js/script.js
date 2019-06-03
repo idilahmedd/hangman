@@ -24,40 +24,75 @@
 
 
 
-// ** when writing functions dont write function and 
-//function but easier to read
 
 //** all var on top */
 
-// Create an array of random words for source of secret word
-var words = [
-    "cookies",
-    "passion",
-    "caramel",
-    ];
-var word = words[Math.floor(Math.random() * words.length)]
-var trys = "myLives"; 
-var guessingLetter = "";
+/// create an array of words & varibles
 
-var answerArray = [];
-for (var i = 0; i < word.length; i++) {
-  answerArray[i] = "_";
+var wordList = ["cake", "brownies"];
+
+var underScore = [];
+
+var rightLetters = [];
+
+var wrongLetters = [];
+
+var correctAnswer = wordList[Math.floor(Math.random() * wordList.length)];
+var resetButton = document.getElementById("reset");
+var input = document.getElementById('input');
+// Dom Manipulation
+
+var docUnderScore = document.getElementsByClassName('underScore');
+var docrightLetters = document.getElementsByClassName('rightLetters');
+var docwrongLetters = document.getElementsByClassName('wrongLetters');
+// Main 
+//===========================================================
+// Create underscores based on length of word
+var makeUnderScore = function () {
+  for (var i = 0; i < correctAnswer.length; i++) {
+    underScore.push('_');
+    docUnderScore[0].textContent = underScore.join(' ');
+    
+  }
+  return (underScore);
 }
-var remainingLetters = word.length;
+//console.log(makeUnderScore());
 
+//===============================================================
+//// Get users guess/input
 
-var inputString = "";
-var inputEl = document.querySelector("input");
-var pEl = document.getElementById("myLives");
-var btnEl1 = document.getElementById("submit")
-
-btnEl1.addEventListener("click", function(e) {
-  var letterInput = inputEl.value;
-  inputEl.value = ""; 
-  guessingLetter = guessingLetter + letterInput;
-  pEl.answerArray = guessingLetter;
+document.addEventListener('keypress', (event) => {
+  var keyword = String.fromCharCode(event.keyCode);
+  
+  //// If user guess is right 
+  if (correctAnswer.indexOf(keyword) > -1) {
+    //// add to rightWord to right array
+    rightLetters.push(keyword);
+    
+    //// replace underscore with right letter
+    underScore[correctAnswer.indexOf(keyword)] = keyword;
+    
+    docUnderScore[0].textContent = underScore.join(' ');
+    
+    console.log(underScore);
+    
+    //// Check to see if user word matches guesses
+    if(underScore.join('') == correctAnswer) {
+      alert('You Win');
+    }
+  } 
+  else {
+    ////  if wrong push to wrong array
+    wrongLetters.push(keyword)
+    docwrongLetters[0].textContent = wrongLetters.join(',');
+    // console.log(wrongLetters)
+    
+  }
+  
 });
-
-
-
-
+resetButton.addEventListener("click", function(e){
+  var reset = input.value;
+  resetButton.reset();
+});
+docUnderScore[0].innerHTML = underScore.join(' ');
+makeUnderScore();
