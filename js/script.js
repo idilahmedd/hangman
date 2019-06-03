@@ -41,7 +41,7 @@ var correctAnswer = wordList[Math.floor(Math.random() * wordList.length)];
 var resetButton = document.getElementById("reset");
 var input = document.getElementById('input');
 // Dom Manipulation
-
+//give El after word to say its an element
 var docUnderScore = document.getElementsByClassName('underScore');
 var docrightLetters = document.getElementsByClassName('rightLetters');
 var docwrongLetters = document.getElementsByClassName('wrongLetters');

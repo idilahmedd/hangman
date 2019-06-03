@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+   
     <header>
         <h1 id="title">Hangman!</h1>
     </header>
@@ -15,11 +16,11 @@
         <p class="bio">What is my favorite dessert!</p>
         <input type="text" name="input" placeholder= "Enter your guess here">
         
+        <div class="rightLetters">Right Letters:</div>
       <div class="underScore"></div>
-      <div class="rightLetters">Right Letters</div>
+      <p id= "text" class="p2">Wrong Letters:</p>
       <p id= "text" class="p1"></p>
-      <p id= "text" class="p2">Wrong Letters</p>
-      <div class="wrongLetters">Wrong Letters</div>
+      <div class="wrongLetters"></div>
         <button id= "reset" onclick= "window.location.reload()">Reset</button>
     </main>
     <footer>    
